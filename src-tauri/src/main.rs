@@ -11,6 +11,7 @@ fn main() {
     } else {
       tauri::Menu::default()
     })
+    .invoke_handler(tauri::generate_handler![])
     .run(context)
     .expect("error while running tauri application");
 }

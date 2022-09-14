@@ -4,15 +4,24 @@
     "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run start",
     "devPath": "http://localhost:3000",
-    "distDir": "../build"
+    "distDir": "../build",
+    "withGlobalTauri": true
   },
   "package": {
-    "productName": "athena-system",
+    "productName": "nue-system",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "globalShortcut": {
+        "all": true
+      },
+      "shell": {
+        "all": true,
+        "execute": true,
+        "sidecar": true,
+        "open": true
+      }
     },
     "bundle": {
       "active": true,
@@ -58,8 +67,8 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "Athena System",
-        "width": 800
+        "title": "Nue System",
+        "width": 1000
       }
     ]
   }
